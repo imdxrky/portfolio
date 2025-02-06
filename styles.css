@@ -99,8 +99,9 @@ nav ul li a:hover {
 }
 
 .theme-toggle {
-    margin-top: auto;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     background: none;
     border: none;
     color: var(--sidebar-text-color);
