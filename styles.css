@@ -89,12 +89,11 @@ nav ul li a {
     display: block;
     width: 100%;
     padding: 10px 0;
-    transition: background 0.3s, color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav ul li a:hover {
-    background: var(--link-hover-color);
-    color: white;
+    color: var(--link-hover-color);
     transform: scale(1.1);
 }
 
@@ -157,11 +156,13 @@ main {
 h1, h2 {
     margin: 0 0 20px;
     font-size: 2.5em;
+    animation: textPopUp 1s forwards;
 }
 
 p {
     font-size: 1.2em;
     line-height: 1.6;
+    animation: textPopUp 1s forwards;
 }
 
 @keyframes fadeIn {
@@ -192,6 +193,17 @@ p {
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes textPopUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
